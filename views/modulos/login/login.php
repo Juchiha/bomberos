@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ireport Cloud</title>
+    <title>Como lo quieras llamar</title>
     <link rel="icon" href="views/assets/img/theme/lOGO_2_GRANDE.jpg" type="image/jpg">
 
     <!-- Custom fonts for this template-->

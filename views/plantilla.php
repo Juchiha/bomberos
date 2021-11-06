@@ -14,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Ireport Cloud</title>
+    <title>Como lo quieras llamar</title>
 
     <!-- Custom fonts for this template-->
     <link href="views/assets/StartBoots/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
