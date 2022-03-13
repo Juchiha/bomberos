@@ -32,10 +32,16 @@
                         <div class="card-header">
                             <h3 class="card-title">Usuarios Registrados del sistema</h3>
                             <div class="card-tools">
+                                <?php 
+                                    if ($_SESSION['per_adiciona_i'] == 1) {     
+                                ?>
                                 <button type="button" data-toggle="modal" 
                                 data-target="#modalAgregarPerfiles" class="btn btn-tool" title="Agregar Nuevo Perfil">
                                     <i class="fas fa-plus"></i>
                                 </button>
+                                <?php 
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- /.card-header -->
