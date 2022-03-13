@@ -1,101 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Benemerito Cuerpo de Bomberos del Cantón Pedernales | Log in</title>
 
-<head>
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="views/assets/plugins/fontawesome-free/css/all.min.css">
+        <!-- icheck bootstrap -->
+        <link rel="stylesheet" href="views/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="views/assets/dist/css/adminlte.min.css">
+        <link rel="icon" href="views/assets/dist/img/logoBomb.jpeg">
+    </head>
+    <body class="hold-transition login-page">
+        <div class="login-box">
+            <div class="login-logo">
+                <img src="views/assets/dist/img/logoBomb.jpeg" class="brand-image img-circle elevation-3" style="opacity: .8">
+            </div>
+            <!-- /.login-logo -->
+            <div class="card">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">Benemerito Cuerpo de Bomberos del Cantón </b>Pedernales</p>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Como lo quieras llamar</title>
-    <link rel="icon" href="views/assets/img/theme/lOGO_2_GRANDE.jpg" type="image/jpg">
-
-    <!-- Custom fonts for this template-->
-    <link href="views/assets/StartBoots/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="views/assets/StartBoots/css/sb-admin-2.min.css" rel="stylesheet">
-
-</head>
-
-<body class="bg-gradient-primary">
-
-    <div class="container">
-
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
-
-            <div class="col-xl-10 col-lg-12 col-md-9">
-
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Bienvenido! </h1>
-                                    </div>
-                                    <form method="post" class="user">
-                                        <div class="form-group">
-                                            <input type="email" required="true" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Correo" name="ingCorreo">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" required="true" placeholder="Contraseña" name="ingPassword"> 
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Recuerdame
-                                                    </label>
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                          Login
-                                        </button> 
-                                        <hr>
-                                        <?php
-                                          $authControl = new ControladorAuth();
-                                          $authControl->inicoSession();
-                                        ?>
-                                    </form>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        
-                                    </div>
+                    <form method="post">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" name="txtEmailBomB" id="txtEmailBomB" placeholder="Correo">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="txtPasswordBom" name="txtPasswordBom" placeholder="Password">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="icheck-primary">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">
+                                        Recuerdame
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-4">
+                                <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <?php
+                            $authControl = new ControladorAuth();
+                            $authControl->inicoSession();
+                        ?>
+                    </form>
                 </div>
-
+                <!-- /.login-card-body -->
             </div>
-
         </div>
-
-    </div>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="views/assets/StartBoots/vendor/jquery/jquery.min.js"></script>
-    <script src="views/assets/StartBoots/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="views/assets/StartBoots/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="views/assets/StartBoots/js/sb-admin-2.min.js"></script>
-
-</body>
-
+        <!-- /.login-box -->
+        <!-- jQuery -->
+        <script src="views/assets/plugins/jquery/jquery.min.js"></script>
+        <!-- Bootstrap 4 -->
+        <script src="views/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="views/assets/dist/js/adminlte.min.js"></script>
+    </body>
 </html>

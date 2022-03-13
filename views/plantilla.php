@@ -5,35 +5,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Benemerito Cuerpo de Bomberos del Cantón Pedernales | Dashboard</title>
 
-<head>
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="views/assets/plugins/fontawesome-free/css/all.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <!-- Tempusdominus Bootstrap 4 -->
+        <link rel="stylesheet" href="views/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+        <!-- iCheck -->
+        <link rel="stylesheet" href="views/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+        <!-- JQVMap -->
+        <link rel="stylesheet" href="views/assets/plugins/jqvmap/jqvmap.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="views/assets/dist/css/adminlte.min.css">
+        <!-- overlayScrollbars -->
+        <link rel="stylesheet" href="views/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+        <!-- Daterange picker -->
+        <link rel="stylesheet" href="views/assets/plugins/daterangepicker/daterangepicker.css">
+        <!-- summernote -->
+        <link rel="stylesheet" href="views/assets/plugins/summernote/summernote-bs4.min.css">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Como lo quieras llamar</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="views/assets/StartBoots/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="views/assets/StartBoots/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="views/assets/vendor/alertify/alertify.core.css">
-    <link rel="stylesheet" href="views/assets/vendor/alertify/alertify.default.css">
-    <link rel="stylesheet" href="views/assets/vendor/sweetalert/sweetalert.css">
-    <link rel="icon" href="views/assets/img/theme/lOGO_2_GRANDE.jpg" type="image/jpg">
-</head>
-
-<body id="page-top sidebar-toggled">
-    <script src="views/assets/StartBoots/vendor/jquery/jquery.min.js"></script>
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+        <link rel="icon" href="views/assets/dist/img/logoBomb.jpeg">
+        <!-- jQuery -->
+        <script src="views/assets/plugins/jquery/jquery.min.js"></script>
+    </head>
+    <body class="hold-transition sidebar-mini layout-fixed">
+        <div class="wrapper">
+            <!-- Preloader -->
+            <!--<div class="preloader flex-column justify-content-center align-items-center">
+                <img class="animation__shake" src="views/assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            </div>-->
     <?php
         include 'modulos/menu.php';
 echo '
@@ -54,10 +61,16 @@ echo '
                     echo "<script>$('#inicio').addClass('active');</script>";
                     break;
 
-                case 'carpetas':
-                    include "modulos/carpetas/index.php";
-                    echo "<script>$('#inicio').addClass('active');</script>";
+                case 'users':
+                    include "modulos/usuarios/usuarios.php";
+                    echo "<script>$('#users').addClass('active');</script>";
                     break;
+
+                case 'perfiles':
+                    include "modulos/perfiles/perfiles.php";
+                    echo "<script>$('#perfiles').addClass('active');</script>";
+                    break;
+                
 
                 case 'salir':
                     include "modulos/salir.php";
@@ -67,50 +80,43 @@ echo '
             include "modulos/dashboard/index.php";
             echo "<script>$('#inicio').addClass('active');</script>";
         }
+
+        include 'modulos/footer.php';
     ?>
-          </div>
-          <!-- /.container-fluid -->
+         
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
         </div>
-        <!-- End of Main Content -->
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; MyWorky 2021</span>
-                </div>
-            </div>
-        </footer>
-      <!-- End of Footer -->
-      </div>
-      <!-- End of Content Wrapper -->
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- hASTA Aqui -->
+        <!-- hASTA Aqui -->
     
-    <!-- Bootstrap core JavaScript-->
-    
-    <script src="views/assets/StartBoots/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+        <!-- jQuery UI 1.11.4 -->
+        <script src="views/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+          $.widget.bridge('uibutton', $.ui.button)
+        </script>
+        <!-- Bootstrap 4 -->
+        <script src="views/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- JQVMap -->
+        <script src="views/assets/plugins/jqvmap/jquery.vmap.min.js"></script>
+        <script src="views/assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="views/assets/plugins/jquery-knob/jquery.knob.min.js"></script>
+        <!-- daterangepicker -->
+        <script src="views/assets/plugins/moment/moment.min.js"></script>
+        <script src="views/assets/plugins/daterangepicker/daterangepicker.js"></script>
+        <!-- Tempusdominus Bootstrap 4 -->
+        <script src="views/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Summernote -->
+        <script src="views/assets/plugins/summernote/summernote-bs4.min.js"></script>
+        <!-- overlayScrollbars -->
+        <script src="views/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="views/assets/dist/js/adminlte.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="views/assets/StartBoots/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="views/assets/StartBoots/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="views/assets/StartBoots/vendor/chart.js/Chart.min.js"></script>
-
-    <script src="views/assets/vendor/blockui/blockUI.js"></script>
-
-    <script src="views/assets/vendor/alertify/alertify.min.js"></script>
-
-    <script src="views/assets/vendor/sweetalert/sweetalert.min.js"></script>
-</body>
-
+    </body>
 </html>

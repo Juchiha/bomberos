@@ -3,12 +3,12 @@
 	* Obtener los datos de los usuarios del sistema, para permitir o no su ingreso a este
 	*/
 	
-	class ModeloAuth
+	class ModeloAuth extends ModeloDAO
 	{
 		static public function getDatosUsuarioLogin($item, $valor){
 			if(!is_null($item)){
 				//echo "SELECT * FROM go_users WHERE $item = '$valor'";
-				$stmt = Conexion::conectar()->prepare("SELECT * FROM gi_usuario WHERE $item = :$item");
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM users JOIN sys_perfiles ON per_id_i = user_per_id_i WHERE $item = :$item");
 				$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
 				$stmt->execute();
 				$object = $stmt->fetch();
