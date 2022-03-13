@@ -35,7 +35,7 @@
         <!-- jQuery -->
         <script src="views/assets/plugins/jquery/jquery.min.js"></script>
     </head>
-    <body class="hold-transition sidebar-mini layout-fixed">
+    <body class="sidebar-mini accent-danger sidebar-collapse layout-fixed ">
         <div class="wrapper">
             <!-- Preloader -->
             <!--<div class="preloader flex-column justify-content-center align-items-center">
